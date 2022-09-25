@@ -9,7 +9,6 @@ import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
@@ -20,7 +19,7 @@ public class QrController {
         try {
             BitMatrix bitMatrix=writer.encode(text, BarcodeFormat.QR_CODE,400,400);
             //generate image from bitMatrix
-            MatrixToImageWriter.writeToPath(bitMatrix,"PNG",new File("/home/yosef/IdeaProjects/java/Qr-code/src/qr-code1.png").toPath());
+            MatrixToImageWriter.writeToPath(bitMatrix,"PNG",new File("/home/yosef/IdeaProjects/java/Qr-code/src/QrGenerator/qr-code.png").toPath());
         }catch (Exception e){
             e.printStackTrace();
         }
